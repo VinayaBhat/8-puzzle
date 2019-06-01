@@ -1,8 +1,8 @@
 # 8-puzzle
-The 8-puzzle consists of a 3×3 board with eight numbered tiles and a blank space which I have taken to be 0. Any tile adjacent to the blank space (0) can slide into the space. The object is to reach a specified goal state which is 
+The 8-puzzle consists of a 3×3 board with eight numbered tiles and a blank space which I have taken to be 0. Any tile adjacent to the blank space (0) can slide into the space. The object is to reach a specified goal state which is
 1	2	3
 4	5	6
-7	8	0
+7	8	0.
 
 The different states that each action can result in is defined by the location of the eight tiles and blank space because of the action. Starting off with the initial state, which is given as input, we take the possible actions defined for that state which is determined by the location of the blank space. At each new state, we check if the goal state is reached. Path cost is defined as the number of steps in the path which is the number of actions taken to reach the goal state from the initial state.
 
@@ -36,12 +36,12 @@ The composite heuristic uses whichever heuristic function is most accurate on th
 
 Conclusion:
 Average taken over 5 randomly generated initial boards. 
-Best First Search Misplaced Tiles: Average Number of steps 31.6
-Best First Search Manhattan Distance: Average Number of steps 38.0
-Best First Search Composite heuristic: Average Number of steps 38.0
-A* Misplaced Tiles: Average Number of steps 18.4
-A* Manhattan Distance: Average Number of steps 18.4
-A*Composite heuristic Average Number of steps 18.4
+Best First Search Misplaced Tiles: Average Number of steps 31.6.
+Best First Search Manhattan Distance: Average Number of steps 38.0.
+Best First Search Composite heuristic: Average Number of steps 38.0.
+A* Misplaced Tiles: Average Number of steps 18.4.
+A* Manhattan Distance: Average Number of steps 18.4.
+A*Composite heuristic Average Number of steps 18.4.
 
 The A* and Best First Search have been run on 5 inputs. The inputs and the goal state are hardcoded into the program. To test with user input you can use takeuserinput() function instead of calling the main function. Average number of steps is taken over the 5 inputs given to 6 algorithms individually.
 As we can observe from the above output, A* takes a smaller number of steps to reach the goal state than Best First Search. A* does not overestimate the number of steps to reach the goal state, it ends up expanding only the nodes that are in the path to the goal state. As the Best First Search is a greedy approach it expands to states having less cost in its frontier and thus, we have a greater number of states obtained to reach the goal state. 
